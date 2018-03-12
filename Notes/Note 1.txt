@@ -1,0 +1,29 @@
+1. MVC is an architecture for seperation of functionality with in our app.
+
+2. Anything related to the "Database" is placed in the "Models" folder.
+
+3. Anything related to the "Controlling Data" is placed in the "Controller" folder.
+
+4. Anything related to the "Client Views" is placed in the "Views" folder.
+
+5. Create the 3 folders Models, Views and Controllers.
+
+6. In "Models" folders create ---- > database.js & user.js
+
+7. In "Views" folders create ---- > index.ejs , footer.ejs & aboutus.ejs
+
+8. In "Controller" folders create ---- > authentication.js (user form input authentication) & routes.js
+
+9. Generating SSH key for uploading on github
+
+10. Create a new github repository "AdvancedProject1" and then on local folder, "git init" and then "git remote add origin https://github.com/asadferozali/AdvancedProject1.git". This gives us access to our cloud based repository.
+
+11. To add all the files inside our folders to git --> git add.
+
+12. To commit and add a commit message --> git commit -m 'initialized'
+
+13. To push the files on cloud --> git push -u origin master // We only have to do push the first time we are commiting so usually its just a git push
+
+14. 
+
+
