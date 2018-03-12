@@ -18,12 +18,16 @@
 
 10. Create a new github repository "AdvancedProject1" and then on local folder, "git init" and then "git remote add origin https://github.com/asadferozali/AdvancedProject1.git". This gives us access to our cloud based repository.
 
-11. To add all the files inside our folders to git --> git add.
+11. To add all the files inside our folders to git --> git add .
 
 12. To commit and add a commit message --> git commit -m 'initialized'
 
 13. To push the files on cloud --> git push -u origin master // We only have to do push the first time we are commiting so usually its just a git push
 
-14. 
+14. Use ".gitignore" file to exclude files that we do not want to push to github. After adding files to ".gitignore" run the git command --> git add .
+then 
+git command --> git commit -m 'apiKeyIgnored'
+then
+git command --> git push
 
 
