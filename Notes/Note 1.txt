@@ -1,3 +1,5 @@
+Basics
+
 1. MVC is an architecture for seperation of functionality with in our app.
 
 2. Anything related to the "Database" is placed in the "Models" folder.
@@ -29,5 +31,53 @@ then
 git command --> git commit -m 'apiKeyIgnored'
 then
 git command --> git push
+
+Mongoose
+
+1. Mogoose is a schema based data model for MongoDB collections
+
+2. A schema is a model for an actual collection. With mongoose schema we can specify required fields
+
+3. Create --> app.js file and add required packages, add mongodb connection link and mongoose, add user schema model file link and connect statements. Then add app.listen to start the server. ADD "node_modules/" to ".gitignore"  
+
+const express = require("express"),
+    app = express(),
+    mongodb = require("mongodb"),
+    mongoose = require("mongoose"),
+    port = process.env.PORT || 3000,
+    myDB = "mongodb://localhost/AdvancedProject1Database",
+    User = require("./Models/user.model.js");
+
+mongoose.connect(myDB);
+
+app.listen(port, (error) => {
+    if (!error) {
+        console.log("listening on port " + port);
+    } else {
+        console.log(error);
+    }
+});
+
+4. In Models create --> user.model.js
+
+const mongoose = require("mongoose"),
+    Schema = mongoose.Schema;
+
+let UserSchema = new Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    isOver21: {
+        type: Boolean,
+        required: false
+    }
+});
+
+module.exports = mongoose.model('User', UserSchema);
 
 
